@@ -20,9 +20,16 @@ yarn run build
 yarn run lint
 ```
 
+## 路由懒加载配置
+```
+component: () => import('@/views/index.vue')
+```
+
 ### 问题解决
 https://blog.csdn.net/hesi726/article/details/80926331
 
 ### 配置
 https://blog.csdn.net/u011818572/article/details/79999003
 - 安装 @vue/cli-plugin-typescript，ts-loader
+
+
