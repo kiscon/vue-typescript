@@ -67,5 +67,13 @@ console.log(process.env.NODE_ENV)
   src/config/api.js
 ```
 
+- 浏览打包后的dist文件
+```
+安装：
+npm install -g serve
+使用
+serve -s dist
+```
+
 
 

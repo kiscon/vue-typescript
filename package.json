@@ -7,7 +7,8 @@
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build --dest=server/",
     "lint": "vue-cli-service lint",
-    "test-build": "vue-cli-service build --mode=test --dest=server/"
+    "test-build": "vue-cli-service build --mode=test --dest=server/",
+    "dev-build": "vue-cli-service build --mode=development --dest=server/"
   },
   "dependencies": {
     "vue": "^2.5.16",
