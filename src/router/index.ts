@@ -9,7 +9,7 @@ const Test3 = () => import('@/views/test3/app.vue');
 Vue.use(Router);
 
 export default new Router({
-  mode:  'history',
+  mode:  'hash',
   routes: [
     {
       path: '/',

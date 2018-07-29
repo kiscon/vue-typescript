@@ -50,6 +50,22 @@ https://blog.csdn.net/u011818572/article/details/79999003
   "lint": "vue-cli-service lint",
   "test-build": "vue-cli-service build --mode=test --dest=server/"
 },
+
+--dest=server/ 指定打包编译的目录，默认dist
 ```
+
+- 在客户端侧代码中使用环境变量
+```
+NODE_ENV - 会是 "development"、"production" 或 "test" 中的一个。具体的值取决于应用运行的模式。
+
+console.log(process.env.NODE_ENV)
+
+```
+- 添加不同的api环境的api配置文件
+
+```
+  src/config/api.js
+```
+
 
 
