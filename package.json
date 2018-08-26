@@ -4,7 +4,7 @@
   "author": "kiscon",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --open",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest=server/",
     "lint": "vue-cli-service lint",
     "test-build": "vue-cli-service build --mode=test --dest=server/",
