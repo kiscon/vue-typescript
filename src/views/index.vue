@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li><router-link to="test1">跳转到test1（vue-class-component）</router-link></li>
+      <li><router-link to="test1">跳转到test1</router-link></li>
       <li><router-link to="test2">跳转到test2（vue-property-decorator）</router-link></li>
       <li><router-link to="test3">跳转到test3（ES6）</router-link></li>
     </ul>

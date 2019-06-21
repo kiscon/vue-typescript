@@ -1,3 +1,4 @@
+// @ts-ignore
 let ENV = process.env.NODE_ENV || 'development'
 let commonApi = {
   development: {
@@ -11,4 +12,5 @@ let commonApi = {
   }
 }
 
+// @ts-ignore
 export default commonApi[ENV]

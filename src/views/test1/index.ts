@@ -1,5 +1,5 @@
 // @ts-ignore
-import { Component, Vue, Watch, Prop } from 'vue-property-decorator'
+import { Component, Vue, Watch, Prop, Emit } from 'vue-property-decorator'
 import { Topic } from './interface'
 import testComponent from '@/components/test_1.vue'
 
@@ -37,11 +37,14 @@ export default class App extends Vue {
   // method
   greet() {
     console.log('greeting: ' + this.msg)
-    this.$emit('postSideShow', this.msg)
+    // @ts-ignore
+    // this.$emit('postSideShow', this.msg)
+    this.postSideShow()
   }
 
-  $emit(arg0: string, msg: number): any {
-    throw new Error('Method not implemented.')
+  @Emit('postSideShow')
+  postSideShow() {
+    return this.msg
   }
 
   getTopic() {

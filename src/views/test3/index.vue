@@ -6,8 +6,13 @@
   </div>
 </template>
 <script>
-  import Index from './index'
-  export default Index
+  import { Component, Vue } from 'vue-property-decorator'
+  import Index from './index.ts'
+  @Component({
+    mixins: [Index]
+  })
+  export default class App extends Vue {
+  }
 </script>
 <style lang="less" scoped>
   @import "./index.less";
