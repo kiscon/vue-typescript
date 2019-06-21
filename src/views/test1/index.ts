@@ -1,7 +1,9 @@
+// @ts-ignore
 import { Component, Vue, Watch, Prop } from 'vue-property-decorator'
 import { Topic } from './interface'
 import testComponent from '@/components/test_1.vue'
 
+// @ts-ignore
 @Component({
   components: {
     testComponent
@@ -10,9 +12,9 @@ import testComponent from '@/components/test_1.vue'
 export default class App extends Vue {
 
   // initial data
-  msg: number = 123;
-  propMsg: string = '父传子';
-  topics: Topic[] = [];
+  msg: number = 123
+  propMsg: string = '父传子'
+  topics: Topic[] = []
 
 
   created() {
@@ -29,14 +31,19 @@ export default class App extends Vue {
   // watch
   @Watch('msg')
   watchMsg(val: any){
-    console.log(val);
+    console.log(val)
   }
 
   // method
   greet() {
     console.log('greeting: ' + this.msg)
-    this.$emit("postSideShow", this.msg)
+    this.$emit('postSideShow', this.msg)
   }
+
+  $emit(arg0: string, msg: number): any {
+    throw new Error('Method not implemented.')
+  }
+
   getTopic() {
     const data = {
       //   date: new Date().getTime().toString(),

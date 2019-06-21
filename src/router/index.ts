@@ -1,12 +1,14 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+// @ts-ignore
+import Vue from 'vue'
+// @ts-ignore
+import Router from 'vue-router'
 
-const Index = () => import('@/views/index.vue');
-const Test1 = () => import('@/views/test1/app.vue');
-const Test2 = () => import('@/views/test2/app.vue');
-const Test3 = () => import('@/views/test3/app.vue');
+const Index = () => import('@/views/index.vue')
+const Test1 = () => import('@/views/test1/index.vue')
+const Test2 = () => import('@/views/test2/index.vue')
+const Test3 = () => import('@/views/test3/index.vue')
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   mode:  'hash',
@@ -32,6 +34,6 @@ export default new Router({
       component: Test3
     }
   ]
-});
+})
 
 

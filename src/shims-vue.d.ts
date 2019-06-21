@@ -1,4 +1,5 @@
 declare module '*.vue' {
-  import Vue from 'vue';
-  export default Vue;
+  // @ts-ignore
+  import Vue from 'vue'
+  export default Vue
 }

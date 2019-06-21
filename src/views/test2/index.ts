@@ -1,8 +1,10 @@
-import { Component, Vue, Watch } from 'vue-property-decorator';
+// @ts-ignore
+import { Component, Vue, Watch } from 'vue-property-decorator'
 
 // @Component 修饰符注明了此类为一个 Vue 组件
+// @ts-ignore
 @Component({
-  // 所有的组件选项都可以放在这里
+// 所有的组件选项都可以放在这里
 })
 
 export default class App1 extends Vue {

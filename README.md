@@ -70,9 +70,9 @@ console.log(process.env.NODE_ENV)
 - 浏览打包后的dist文件
 ```
 安装：
-npm install -g serve
-使用
-serve -s dist
+yarn add live-server
+使用，在package.json里配置
+"start": "live-server ./dist",
 ```
 
 

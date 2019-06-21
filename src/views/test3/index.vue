@@ -6,9 +6,9 @@
   </div>
 </template>
 <script>
-    import App from "./app.js";
-    export default App;
+  import Index from './index'
+  export default Index
 </script>
 <style lang="less" scoped>
-  @import "./app.less";
+  @import "./index.less";
 </style>
