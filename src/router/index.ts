@@ -7,6 +7,8 @@ const Index = () => import('@/views/index.vue')
 const Test1 = () => import('@/views/test1/index.vue')
 const Test2 = () => import('@/views/test2/index.vue')
 const Test3 = () => import('@/views/test3/index.vue')
+const Login = () => import('@/views/login/index.vue')
+const amapMap = () => import('@/views/amap-map/index.vue')
 
 Vue.use(Router)
 
@@ -15,8 +17,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-	    name: 'Index',
-	    component: Index,
+	    name: 'Login',
+	    component: Login,
     },
 	  {
 	  	path: '/test1',
@@ -32,6 +34,11 @@ export default new Router({
       path: '/test3',
       name: 'Test3',
       component: Test3
+    },
+    {
+      path: '/amap-map',
+      name: 'amapMap',
+      component: amapMap
     }
   ]
 })
