@@ -5,7 +5,6 @@ import Router from 'vue-router'
 
 const Login = () => import('@/views/login/index.vue')
 const TsUse = () => import('@/views/ts-use/index.vue')
-const EnvTest = () => import('@/views/env-test/index.vue')
 const AmapPage = () => import('@/views/amap-page/index.vue')
 
 
@@ -19,11 +18,6 @@ export default new Router({
 	    name: 'Login',
 	    component: Login,
     },
-	  {
-	  	path: '/env-test',
-		  name: 'envTest',
-		  component: EnvTest
-	  },
     {
       path: '/ts-use',
       name: 'TsUse',

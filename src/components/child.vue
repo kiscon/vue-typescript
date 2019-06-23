@@ -1,10 +1,11 @@
 <template>
   <div>
-    <p>helloMsg: {{helloMsg}}</p>
+    <p>子组件：helloMsg: {{helloMsg}}</p>
+    <button @click="childClick">childClick{{msg}}</button>
   </div>
 </template>
 <script lang="ts">
-  import { Component, Vue, Prop } from 'vue-property-decorator'
+  import { Component, Vue, Prop, Emit } from 'vue-property-decorator'
 
 	// @Component 修饰符注明了此类为一个 Vue 组件
 	@Component({
@@ -16,15 +17,17 @@
     @Prop({ default: 'default value' }) propMessage!: string
 
     helloMsg: string = 'Hello,' + this.propMessage
+    msg: number = 1
 
     created() {
     }
     mounted() {
     }
 
-    getData() {
+    @Emit('childClick')
+    childClick() {
+      return ++this.msg
     }
-
   }
 </script>
 <style lang="less" scoped>

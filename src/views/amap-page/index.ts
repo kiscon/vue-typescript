@@ -1,5 +1,5 @@
-// @ts-ignore
 import { Vue, Component } from 'vue-property-decorator'
+import { mapConfig } from './map-config'
 import { amapAk } from '@/common/js/mapAk'
 // @ts-ignore
 import aMap from '@/common/map/amapApi.js'
@@ -11,7 +11,10 @@ import aMap from '@/common/map/amapApi.js'
 export default class App extends Vue {
   // initial data
   mapApi: any
-  mapConfig: any
+  mapConfig: mapConfig = {
+    traffic: null,
+    infoWindow: null
+  }
   map: null = null
   isRTT: Boolean = false
 
@@ -55,7 +58,6 @@ export default class App extends Vue {
     this.mapConfig.infoWindow = mapApi.createInfoWindow()
   }
   openOrCloseRTT() {
-    // @ts-ignore
     let _traffic = this.mapConfig.traffic
     this.isRTT = !this.isRTT
     if (this.isRTT) {
