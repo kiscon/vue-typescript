@@ -8,13 +8,13 @@
       </h2>
       <div class="input-wrap">
         <span class="icon icon-account"></span>
-        <input maxlength="30" placeholder="请输入账户名">
+        <input v-model="account" type="text" maxlength="30" placeholder="请输入账户名">
       </div>
       <div class="input-wrap">
         <span class="icon icon-password"></span>
-        <input type="text" maxlength="20" placeholder="请输入密码" autocomplete="off">
+        <input v-model="password" type="password" maxlength="20" placeholder="请输入密码" autocomplete="off">
       </div>
-      <button class="login-btn">登录</button>
+      <button @click="submit" class="login-btn">登录</button>
     </section>
   </div>
 </template>

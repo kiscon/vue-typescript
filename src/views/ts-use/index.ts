@@ -1,9 +1,7 @@
-// @ts-ignore
 import { Component, Vue, Watch, Prop, Emit } from 'vue-property-decorator'
 import { Topic } from './interface'
 import testComponent from '@/components/test_1.vue'
 
-// @ts-ignore
 @Component({
   components: {
     testComponent

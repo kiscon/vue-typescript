@@ -15,11 +15,10 @@ export default class App extends Vue {
 
   created() {
   }
-  //
+
   mounted() {
     // @ts-ignore
     console.log(process.env.NODE_ENV)
-    console.log(3333)
     this.getData()
   }
 

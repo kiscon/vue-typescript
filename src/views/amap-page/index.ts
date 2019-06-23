@@ -5,21 +5,20 @@ import { amapAk } from '@/common/js/mapAk'
 import aMap from '@/common/map/amapApi.js'
 
 
-@Component
+@Component({
+  name: 'AmapPage'
+})
 export default class App extends Vue {
   // initial data
-  mapApi: Object = {}
-  mapConfig: Object = {
-    traffic: null,
-    infoWindow: null
-  }
+  mapApi: any
+  mapConfig: any
   map: null = null
   isRTT: Boolean = false
 
   created() {
     this.setAmapLink()
   }
-  //
+
   mounted() {
     // @ts-ignore
     console.log(process.env.NODE_ENV)
@@ -52,9 +51,7 @@ export default class App extends Vue {
       // @ts-ignore
       map.addControl(new AMap.ToolBar())
     })
-    // @ts-ignore
     this.mapConfig.traffic = mapApi.createTraffic()
-    // @ts-ignore
     this.mapConfig.infoWindow = mapApi.createInfoWindow()
   }
   openOrCloseRTT() {
