@@ -1,16 +1,16 @@
 module.exports = {
-	baseUrl: '/',
+	publicPath: '/',
 	outputDir: process.env.outputDir || 'dist',
 	assetsDir: '',
 	runtimeCompiler: false,
 	productionSourceMap: false,
 	lintOnSave: false,
 	css: {
-		modules: true,
+		// modules: true,
 		sourceMap: false,
 		loaderOptions: {
 			less: {
-				data: `@import '@/common/less/reset.less';`
+				data: `@import '~@/common/less/reset.less';`
 			}
 		}
 	},
