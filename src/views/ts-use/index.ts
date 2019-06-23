@@ -1,4 +1,4 @@
-import { Component, Vue, Watch, Prop, Emit } from 'vue-property-decorator'
+import { Component, Vue, Watch } from 'vue-property-decorator'
 import { Topic } from './interface'
 import child from '@/components/child.vue'
 import Api from '@/config/api'
@@ -12,7 +12,7 @@ export default class App extends Vue {
   // initial data
   msg: number = 123
   propMsg: string = '父传子'
-  topics: Topic[] = []
+  topics: any
   list: Array<number> = [
     Math.random(),
     Math.random(),
@@ -24,7 +24,6 @@ export default class App extends Vue {
   }
   // lifecycle hook
   mounted() {
-    this.greet()
     this.getTopic()
     this.getData()
   }
@@ -39,27 +38,19 @@ export default class App extends Vue {
   }
 
   // method
-  greet() {
-    console.log('greeting: ' + this.msg)
-    // @ts-ignore
-    // this.$emit('postSideShow', this.msg)
-    this.postSideShow()
-  }
-
-  @Emit('postSideShow')
-  postSideShow() {
-    return this.msg
-  }
-
   getTopic(): void {
-    const data = {
-      date: new Date().getTime().toString(),
-      title: '主题',
+    let data:Topic = {
       id: 1,
+      date: Date.now().toString(),
+      title: '主题',
+      summary: '摘要',
       tab: 'tab',
+      pv: 10,
+      commentsCount: 2,
       tags: ['a','b','c']
     }
-    // this.topics = <Topic[]>data
+    this.topics = data
+    console.log(this.topics)
   }
   getData(): void {
     fetch(Api.base_api_url).then((res) => {

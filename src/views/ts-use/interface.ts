@@ -1,8 +1,8 @@
 export interface Topic {
+  id: number
   date: string
   title: string
   summary: string
-  id: number
   tab: string
   pv: number
   commentsCount: number
