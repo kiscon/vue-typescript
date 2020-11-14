@@ -1,4 +1,4 @@
-# vuets1
+# vue3ts
 
 ## Project setup
 ```
